@@ -58,21 +58,24 @@ under the License.
     <% end %>
 
     <% if current_page.data.code_clipboard %>
-    <script>
-      $(function() { setupCodeCopy(); });
-    </script>
+      <script>
+        $(function () {
+          setupCodeCopy();
+        });
+      </script>
     <% end %>
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
     <a href="#" id="nav-button">
       <span>
-        NAV
-        <%= image_tag('navbar.png') %>
+        <%= image_tag('navbar.svg') %>
       </span>
     </a>
     <div class="toc-wrapper">
-      <%= image_tag "logo.png", class: 'logo' %>
+      <div class="image-logo">
+        <%= image_tag "logo.svg", class: 'logo' %>
+      </div>
       <% if language_tabs.any? %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>
@@ -86,7 +89,7 @@ under the License.
       <% end %>
       <% if current_page.data.search %>
         <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
+          <input type="text" class="search" id="input-search" placeholder="Buscar">
         </div>
         <ul class="search-results"></ul>
       <% end %>

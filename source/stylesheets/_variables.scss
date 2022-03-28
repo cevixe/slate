@@ -21,40 +21,59 @@ under the License.
 // Use these settings to help adjust the appearance of Slate
 
 
+$cvx-dark: #191C2B;
+$cvx-light-dark: #282a36;
+$cvx-bg: #041635;
+$cvx-white: #ffffff;
+$cvx-grey: #e6e6e6;
+$cvx-blue: #1494ff;
+$cvx-light-blue: #47abff;
+$cvx-cyan: #7ac2ff;
+$cvx-pink: #ff79c6;
+$cvx-purple: #bd93f9;
+$cvx-yellow: #f1fa8c;
+$cvx-light-yellow: #fdffe9;
+$cvx-red: #ff6868;
+$cvx-orange: #ffb86c;
+$cvx-green: #93f3aa;
+
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #2E3336 !default;
-$examples-bg: #2E3336 !default;
-$code-bg: #1E2224 !default;
-$code-annotation-bg: #191D1F !default;
-$nav-subitem-bg: #1E2224 !default;
-$nav-active-bg: #0F75D4 !default;
-$nav-active-parent-bg: #1E2224 !default; // parent links of the current section
-$lang-select-border: #000 !default;
-$lang-select-bg: #1E2224 !default;
+$nav-bg: $cvx-bg !default;
+$examples-bg: $cvx-bg !default;
+$code-bg: $cvx-bg !default;
+$code-annotation-bg: $cvx-light-dark !default;
+$nav-subitem-bg: $cvx-dark !default;
+$nav-active-bg: $cvx-light-dark !default;
+$nav-active-parent-bg: $cvx-bg !default; // parent links of the current section
+$lang-select-border: $cvx-dark !default;
+$lang-select-bg: $cvx-light-dark !default;
 $lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
-$lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
-$main-bg: #F3F7F9 !default;
-$aside-notice-bg: #8fbcd4 !default;
-$aside-warning-bg: #c97a7e !default;
-$aside-success-bg: #6ac174 !default;
-$search-notice-bg: #c97a7e !default;
+$lang-select-pressed-bg: $cvx-light-dark !default; // color of language tab bg when mouse is pressed
+$main-bg: $cvx-white !default;
+$aside-notice-bg: #f3f7ff !default;
+$aside-notice-text: $cvx-blue !default;
+$aside-warning-bg: $cvx-light-yellow !default;
+$aside-warning-text: #C78925 !default;
+$aside-success-bg: #f6fffb !default;
+$aside-success-text: #448A6B !default;
+$search-notice-bg: $cvx-dark !default;
 
 
 // TEXT COLORS
 ////////////////////
-$main-text: #333 !default; // main content text color
-$nav-text: #fff !default;
-$nav-active-text: #fff !default;
-$nav-active-parent-text: #fff !default; // parent links of the current section
-$lang-select-text: #fff !default; // color of unselected language tab text
-$lang-select-active-text: #fff !default; // color of selected language tab text
-$lang-select-pressed-text: #fff !default; // color of language tab text when mouse is pressed
+$main-text: $cvx-bg !default; // main content text color
+$nav-text: $cvx-white !default;
+$nav-active-text: $cvx-white !default;
+$nav-active-parent-text: $cvx-white !default; // parent links of the current section
+$lang-select-text: $cvx-white !default; // color of unselected language tab text
+$lang-select-active-text: $cvx-white !default; // color of selected language tab text
+$lang-select-pressed-text: $cvx-white !default; // color of language tab text when mouse is pressed
 
 
 // SIZES
 ////////////////////
-$nav-width: 230px !default; // width of the navbar
+$nav-width: 260px !default; // width of the navbar
 $examples-width: 50% !default; // portion of the screen taken up by code examples
 $logo-margin: 0px !default; // margin below logo
 $main-padding: 28px !default; // padding to left and right of content & examples
@@ -69,27 +88,30 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 
 // FONTS
 ////////////////////
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("//fonts.googleapis.com/css?family=Raleway:300,500,700");
+
 %default-font {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 %header-font {
-  @extend %default-font;
-  font-weight: bold;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 %code-font {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 
 // OTHER
 ////////////////////
-$nav-footer-border-color: #666 !default;
-$search-box-border-color: #666 !default;
+$nav-footer-border-color: $cvx-grey !default;
+$search-box-border-color: $cvx-grey !default;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -98,6 +120,6 @@ $search-box-border-color: #666 !default;
 // These settings are probably best left alone.
 
 %break-words {
-    word-break: break-all;
-    hyphens: auto;
+  word-break: break-all;
+  hyphens: auto;
 }
